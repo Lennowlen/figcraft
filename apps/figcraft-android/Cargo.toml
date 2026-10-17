@@ -1,0 +1,29 @@
+[package]
+name = "figcraft-android"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+path = "src/lib.rs"
+
+[dependencies]
+figcraft-ui-egui = { workspace = true }
+figcraft-engine = { workspace = true }
+figcraft-format = { workspace = true }
+eframe = { workspace = true, default-features = false, features = ["wgpu", "android-native-activity"] }
+egui = { workspace = true }
+android-activity = { version = "0.6", features = ["native-activity"] }
+log = { workspace = true }
+android_logger = "0.14"
+jni = "0.21"
+
+[package.metadata.android]
+package = "ai.storyteller.figcraft"
+apk_name = "FigCraft"
+app_name = "FigCraft"
+label = "FigCraft"
+target_sdk_version = 34
+min_sdk_version = 26
+build_targets = ["aarch64-linux-android"]
