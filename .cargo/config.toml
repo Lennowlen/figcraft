@@ -1,7 +1,5 @@
-# Local builds pick up the optional craft-fonts checkout next to this repo (Inter etc.). When the
-# directory is missing the build warns and carries on with egui's bundled fonts and system fonts.
-[env]
-CRAFT_FONTS_DIR = { value = "../craft-fonts", relative = true }
-
 [alias]
-xtask = "run -q -p xtask --"
+xtask = "run -p xtask --"
+
+[target.aarch64-linux-android]
+linker = "C:/Users/ThinkPad/AppData/Local/Android/Sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android34-clang.cmd"

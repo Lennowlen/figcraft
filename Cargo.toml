@@ -116,3 +116,7 @@ codegen-units = 1
 debug = false
 strip = true
 panic = "abort"
+
+
+[patch.crates-io]
+winit = { path = "../winit-patched" }

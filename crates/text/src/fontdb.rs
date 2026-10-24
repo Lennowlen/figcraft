@@ -707,6 +707,8 @@ fn system_font_dirs() -> Vec<std::path::PathBuf> {
     }
     #[cfg(all(unix, not(target_os = "macos")))]
     {
+        v.push("/system/fonts".into());
+        v.push("/sdcard/Download/ArtCraft/Fonts".into());
         v.push("/usr/share/fonts".into());
         v.push("/usr/local/share/fonts".into());
         v.extend(unix_user_font_dirs(std::env::var_os("HOME"), std::env::var_os("XDG_DATA_HOME")));

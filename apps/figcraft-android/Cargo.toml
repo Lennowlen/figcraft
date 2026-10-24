@@ -12,6 +12,7 @@ path = "src/lib.rs"
 figcraft-ui-egui = { workspace = true }
 figcraft-engine = { workspace = true }
 figcraft-format = { workspace = true }
+figcraft-text = { workspace = true }
 eframe = { workspace = true, default-features = false, features = ["wgpu", "android-native-activity"] }
 egui = { workspace = true }
 android-activity = { version = "0.6", features = ["native-activity"] }

@@ -43,6 +43,7 @@ pub fn tab_bar(app: &mut FigApp, ui: &mut Ui) {
         icons::paint(ui.painter(), Rect::from_center_size(hr.center(), vec2(16.0, 16.0)), Icon::Home, t.icon);
         if hresp.clicked() {
             app.ui.home = true;
+            app.services.open_url("app://launcher");
         }
         x += 44.0;
         ui.painter().line_segment([pos2(x, rect.min.y), pos2(x, rect.max.y)], Stroke::new(1.0, t.border));
